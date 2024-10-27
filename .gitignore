@@ -1,0 +1,12 @@
+checkpoints/
+datasets/
+notebooks/
+runs/
+util/output
+**/__pycache__
+**/*.DS_Store
+.vscode
+**/*.zip
+micaai_checkpoints/
+mruns/
+miccai_plots/
