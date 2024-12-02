@@ -39,6 +39,7 @@ def get_particles(model_path):
         points = line.split()
         points = [float(i) for i in points]
         data.append(points)
+    f.close()
     return data
     
                     

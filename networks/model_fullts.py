@@ -171,8 +171,8 @@ class MultiImage2Shape(nn.Module):
         # This is a hacky fix, but it works
         if torch.det(rotation_matrix) < 0:
             Vt_adjusted = Vt.clone()
-            Vt_adjusted[-1, :] = Vt_adjusted[-1, :] * -1
-            rotation_matrix = torch.mm(Vt_adjusted.T, U.T)
+            Vt[-1, :] = Vt_adjusted[-1, :] * -1
+            rotation_matrix = torch.mm(Vt.T, U.T)
 
         # Compute the optimal translation vector
         translation_vector = centroid_target - torch.mm(rotation_matrix, centroid_source.T).T
